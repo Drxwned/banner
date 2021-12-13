@@ -4,7 +4,7 @@ const Discord = require("discord.js"),
 let before = { mSize: 0, vSize: 0 }
 
 bot.on("ready", async () => {
-    console.log(`БОТ ЗАПУЩЕН!`);
+    console.log(`Bot en ligne!`);
 
     setInterval(() => UpdateBunner(), 30000);
     
@@ -19,7 +19,7 @@ bot.on("ready", async () => {
         before = { mSize, vSize };
         const canvas = Canvas.createCanvas(1920, 1080),#  (picture size)
         ctx = canvas.getContext('2d'),
-        background = await Canvas.loadImage('banner.jpg');  # your picture name .jpg or .png
+        background = await Canvas.loadImage('hello.png');  # your picture name .jpg or .png
         ctx.drawImage(background, 0, 0, canvas.width, canvas.height)
         ctx.strokeStyle = '#3f82d9';
         ctx.strokeRect(0, 0, canvas.width, canvas.height);
@@ -35,4 +35,4 @@ bot.on("ready", async () => {
 })
 
 
-bot.login('YOUR_TOKEN');
+bot.login('TOKEN');
